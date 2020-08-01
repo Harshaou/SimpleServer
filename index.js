@@ -51,12 +51,12 @@ app.post('/delete', (req,res) => {
 
 app.post('/update', (req,res) => {
     Employee.findByIdAndUpdate(req.body.id, {
-        user: req.body.user,
+        name: req.body.user,
         email: req.body.email,
-        picture: req.body.picture,
         salery: req.body.salery,
-        position: req.body.position,
         phone: req.body.phone,
+        picture: req.body.picture,
+        position: req.body.position,
     })
     .then(data => {
         console.log(data)
