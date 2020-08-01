@@ -2,16 +2,10 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-const ngrok = require('ngrok');
 require('./model')
 
 app.use(bodyParser.json())
 const Employee = mongoose.model('employeeModel')
-
-(async function() {
-    const url = await ngrok.connect(4000);
-    console.log(url)
-  })()
 
   
   
