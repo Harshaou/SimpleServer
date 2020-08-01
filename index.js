@@ -23,7 +23,7 @@ app.get('/', (req,res) => {
 
 app.post('/send', (req,res) => {
     const employee = new Employee({
-        name: req.body.user,
+        name: req.body.name,
         email: req.body.email,
         salery: req.body.salery,
         phone: req.body.phone,
@@ -51,7 +51,7 @@ app.post('/delete', (req,res) => {
 
 app.post('/update', (req,res) => {
     Employee.findByIdAndUpdate(req.body.id, {
-        name: req.body.user,
+        name: req.body.name,
         email: req.body.email,
         salery: req.body.salery,
         phone: req.body.phone,
